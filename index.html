@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Activity</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <div style="background-color: cornflowerblue; height: 20px; width: 100%;"></div>
+    <div style="margin-left: 25px;">
+        <script src="Mahilom_JohnPaul.js"></script>
+        <h3>P-ELEC2 : ACT Javascript<i><br>John Paul P. Mahilom<br>BSIT II-B</i></h3>
+    <!-- ----------------------------------------------------------------------------------------- -->
+        <br>
+        <h2>1. Create a Script Using alert(), prompt(), and confirm()</h2>
+        <ul>
+            <li>Use alert() to show a welcome message.</li>
+            <li>Use prompt() to ask the user for their name.</li>
+            <li>Use confirm() to ask if they are ready to continue. <br>
+                Based on their response, display an appropriate message using alert() <br>
+                with a message "Thank you for the confirmation".</li>
+        </ul>
+        <p> Test Action 1: <button onclick="runAction1()">Run ➤</button></p>
+    <!-- ----------------------------------------------------------------------------------------- --><hr>
+        <h2>2. Create an Inline JavaScript</h2>
+        <ul>
+            <li>Create a simple HTML structure with a button that, when clicked,<br> 
+                triggers a JavaScript function using inline JavaScript <br>
+                (i.e., JavaScript written directly in the HTML tag).</li>
+        </ul>
+        <p> Test Action 2: <button onclick="alert('Oh, you clicked me...'), alert('There is nothing in here..');">Run ➤</button></p>
+    <!-- ----------------------------------------------------------------------------------------- --> <hr>
+        <h2>3. Create an Internal JavaScript</h2>
+        <ul>
+            <li>Create a simple HTML structure with a button that, <br>
+                when clicked, triggers a JavaScript function using <br>
+                Internal JavaScript (i.e., JavaScript written directly in the HTML tag).</li>
+        </ul>
+    
+        <p> Test Action 3: <button onclick="runAction3()">Run ➤</button></p>
+        <script>
+            function runAction3(){
+                alert("Soo.. you clicked that Test Action 3 huh?");
+                let yourWish = prompt("What is your wish?","1.0 Please");
+    
+                if (yourWish) {
+                    let isReady = confirm(`You said ${yourWish} huh? I guess I'll just let god decide then lol.`);
+                    if (isReady) {
+                        alert("who knows..");
+                    } else {
+                        alert("aight bye!");
+                    }
+                } else {
+                    alert("You didn't enter your name. Refresh the page to try again.");
+                }
+    
+            }
+        </script>
+    <!-- ----------------------------------------------------------------------------------------- --> <hr>
+        <h2>4. Create a Script to Change Background Color on Button Click</h2>
+        <ul>
+            <li>Create a button that, when clicked, changes the <br>
+                background color of the webpage.</li>
+        </ul>
+        <p> Test Action 4: <button onclick="runAction4()">Toggle ↻</button></p>
+    
+        <script>
+            function runAction4() {
+                toggleBackgroundColor();
+            }
+    
+            let isChanged = false;
+            function toggleBackgroundColor() {
+                if (isChanged) {
+                    document.body.style.backgroundColor = "";
+                    document.body.style.color = "black";
+                } else {
+                    document.body.style.backgroundColor = "#242424";
+                    document.body.style.color = "white";
+                }
+                isChanged = !isChanged;
+            }
+        </script>
+    <!-- ----------------------------------------------------------------------------------------- --> <hr>
+        <h2>5. Create a Script to Sum Two Numbers from User Input</h2>
+        <ul>
+            <li>Use prompt() to ask the user for two numbers.</li>
+            <li>Display the sum of those two numbers in an alert.</li>
+        </ul>
+        <p> Test Action 5: <button onclick="runAction5()">Run ➤</button></p>
+    <!-- ----------------------------------------------------------------------------------------- --> <hr>
+        <h2>6. Create a Script that Changes Text When Button is Clicked</h2>
+        <ul>
+            <li>Create a button and a paragraph. When the button is clicked, <br>
+                the text of the paragraph should change.</li>
+            <li>Display the sum of those two numbers in an alert.</li>
+        </ul>
+        <p id="textToChange" style="margin-left: 40px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut <br>
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<br> 
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit<br> 
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in<br> 
+            culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p> Test Action 6: <button onclick="runAction6()">Toggle ↻</button></p>
+    
+        <script>
+             function runAction6() {
+            toggleText();
+        }
+        let isChangedT = false;
+        function toggleText() {
+            const paragraph = document.getElementById("textToChange");
+            if (isChangedT) {
+                paragraph.style.fontFamily = "";
+                paragraph.style.color = "black";
+            } else {
+                paragraph.style.fontFamily = "Times New Roman";
+                paragraph.style.color = "#5E7CC5";
+            }
+            isChangedT = !isChangedT;
+        }
+        </script>
+    <!-- ----------------------------------------------------------------------------------------- --> <hr>
+        <h2>7. Create a Script to Confirm User Age</h2>
+        <ul>
+            <li>Use prompt() to ask the user for their age.</li>
+            <li>Use confirm() to confirm if the age they entered is correct.</li>
+            <li>If the user confirms, display a message saying "Thank you for<br> 
+                confirming your age", otherwise, display "Please try again".</li>
+        </ul>
+        <p> Test Action 7: <button onclick="runAction7()">Run ➤</button></p>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------- --> <hr>
+     
+    <div style="background-color: cornflowerblue; height: 22px; width: 100%;">
+        <p style="color: aliceblue; margin-left: 20px;">CEBU TECHNOLOGICAL UNIVERSITY</p>
+    </div>
+</body>
+</html>
